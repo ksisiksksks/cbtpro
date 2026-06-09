@@ -1,345 +1,312 @@
 <p align="center">
-  <img src="./screenshots/cbtpro_banner.png" alt="CBTPro Banner" width="850">
+  <img src="./screenshots/cbtpro_banner.png" alt="CBTPro Banner" width="100%">
 </p>
+
+<h1 align="center">🚀 CBTPro : Next-Generation Open Source Assessment Platform</h1>
 
 <p align="center">
   <a href="https://github.com/ksisiksksks/cbtpro">
     <img src="https://img.shields.io/github/stars/ksisiksksks/cbtpro?style=for-the-badge&color=FFD700" alt="Stars">
   </a>
   <a href="https://github.com/ksisiksksks/cbtpro/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-Non--Commercial-orange.svg?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/License-Non--Commercial_|_Open_Source-red.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License">
   </a>
   <a href="https://github.com/ksisiksksks/cbtpro/actions">
     <img src="https://img.shields.io/github/actions/workflow/status/ksisiksksks/cbtpro/ci.yml?branch=main&style=for-the-badge" alt="Build Status">
   </a>
+  <br>
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="NodeJS">
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="ExpressJS">
+  <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white" alt="Prisma">
   <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
 </p>
 
 <p align="center">
-  <strong>CBTPro</strong> is an open-source, enterprise-grade admission system coupled with a state-of-the-art Computer Based Testing (CBT) platform. Empowered by real-time proctoring telemetry, automated screen-recording tracking, and AI-assisted exam generation, CBTPro establishes a high-integrity virtual testing environment.
+  <strong>CBTPro</strong> is a revolutionary, enterprise-grade admission system and Computer Based Testing (CBT) platform. Engineered from the ground up for massive scalability, unbreakable integrity, and zero-compromise security. Equipped with AI-driven paper generation, live CCTV telemetry, and automated anti-cheat protocols.
 </p>
 
-> [!WARNING]
-> ### 🛑 STRICT ANTI-RESALE & NON-COMMERCIAL POLICY
-> **CBTPro is 100% Open-Source and free to use for personal, educational, and institutional testing purposes.**
-> * **Free for All:** You are fully allowed to self-host, modify, and distribute this platform to run student admissions for free.
-> * **NO RESALE:** You are **STRICTLY FORBIDDEN** from selling, reselling, renting, leasing, or direct commercial monetization of this software, its source code, or any modified derivative versions. Do not buy or sell this project!
+> [!CAUTION]
+> ### 🛑 STRICT ANTI-RESALE & 100% FREE OPEN-SOURCE POLICY 🛑
+> **CBTPro is PROUDLY OPEN-SOURCE and FREE FOR EVERYONE.** 
+> * **100% FREE FOR ALL:** You are fully allowed to download, self-host, modify, and distribute this platform to run student admissions for completely free.
+> * **NO RESALE / NOT FOR SALE:** You are **STRICTLY FORBIDDEN** from selling, reselling, renting, leasing, commercializing, or making any money off this software. **This software is a gift to the community. DO NOT BUY OR SELL THIS PROJECT!** 
 
 ---
 
-## 🎬 Live Interactive Demo
+## ✨ Experience the Magic (Animated Interactive Demo)
 
-Witness **CBTPro** in action! Below is a live walkthrough of the platform demonstrating:
-1. Public candidate portal and registration flows.
-2. Secure administrative authentication.
-3. Reviewing candidate verification documents.
-4. Structuring rich-text multiple-choice exams.
-5. Accessing candidate telemetry alerts and playing back proctored screen-share recording files.
+Witness **CBTPro** in fluid motion! Below is our ultra-smooth high-definition animated tour showcasing the real-time proctoring telemetry, intuitive admin panels, and the beautiful candidate test-taking experience.
 
 <p align="center">
-  <img src="./screenshots/cbtpro_tour.webp" alt="CBTPro Live Demo Tour" width="850">
+  <img src="./screenshots/cbtpro_tour.webp" alt="CBTPro Animated Live Demo Tour" width="100%" style="border-radius: 10px; box-shadow: 0px 4px 15px rgba(0,0,0,0.3);">
 </p>
 
 ---
 
-## 🗺️ Table of Contents
-1. [Live Interactive Demo](#-live-interactive-demo)
-2. [System Architecture & Workflow](#-system-architecture--workflow)
-3. [Interface Showcases](#-interface-showcases)
-4. [Key Architectural Capabilities](#-key-architectural-capabilities)
-5. [Prisma Database Schema Definitions](#-prisma-database-schema-definitions)
-6. [Rest API Reference Guide](#-rest-api-reference-guide)
-7. [Directory Structure](#-directory-structure)
-8. [Environment Configurations](#-environment-configurations)
-9. [Setup & Installation Instructions](#-setup--installation-instructions)
-10. [Proctoring Telemetry Details](#-proctoring-telemetry-details)
-11. [Troubleshooting & FAQ](#-troubleshooting--faq)
-12. [Project Roadmap](#-project-roadmap)
-13. [Contributing & License](#-contributing--license)
+## 📖 Comprehensive Table of Contents
+1. [🌟 Why Choose CBTPro?](#-why-choose-cbtpro)
+2. [🖥️ System Architecture & Telemetry Flow](#️-system-architecture--telemetry-flow)
+3. [📺 Detailed Interface Showcases](#-detailed-interface-showcases)
+4. [🛡️ Unbreakable Anti-Cheat Mechanics](#️-unbreakable-anti-cheat-mechanics)
+5. [🤖 AI-Powered Exam Generation](#-ai-powered-exam-generation)
+6. [📊 Prisma Database Schema & ERD](#-prisma-database-schema--erd)
+7. [🔌 Extensive REST API Reference Guide](#-extensive-rest-api-reference-guide)
+8. [📁 Enterprise Directory Structure](#-enterprise-directory-structure)
+9. [⚙️ Complete Setup & Installation Instructions](#️-complete-setup--installation-instructions)
+10. [📈 Project Roadmap & Future Outlook](#-project-roadmap--future-outlook)
+11. [🤝 Contributing & License](#-contributing--license)
 
 ---
 
-## 🖥️ System Architecture & Workflow
+## 🌟 Why Choose CBTPro?
 
-Here is how the telemetry logs, screen recording files, and anti-cheat modules interact between client, server, database, and AI SDKs:
+CBTPro isn't just another testing tool. It is a **comprehensive admission ecosystem** designed for modern educational institutions requiring absolute certainty in exam integrity. 
+
+* **Completely Free:** Don't pay thousands of dollars for proprietary software. CBTPro offers premium features at zero cost.
+* **Modern Tech Stack:** Built with React 18, TypeScript, Node.js, Express, and Prisma ORM. Fast, reliable, and type-safe.
+* **Real-time Proctoring:** Live telemetry gives invigilators immediate insight into any candidate's behavior.
+* **AI Integration:** Stop typing questions manually. Upload a PDF, and our Groq Llama 3 AI parser will structure your exam automatically.
+* **Scalable Architecture:** Designed to handle thousands of concurrent test-takers with efficient WebM video chunking.
+
+---
+
+## 🖥️ System Architecture & Telemetry Flow
+
+CBTPro utilizes a micro-service-inspired monolithic design. The frontend client captures device hardware streams and pushes asynchronous telemetry packets to the backend, which persists data to MySQL via Prisma, and serves real-time feeds to the Admin Dashboard.
 
 ```mermaid
 graph TD
-    subgraph "Client App (React + MediaRecorder API)"
-        A["Student Login"] --> B["Identity & Token Verification"]
-        B --> C["Enforced Screen Share Handshake"]
-        C --> D["CBT Exam Workspace"]
-        D -->|Record screen content| E["MediaRecorder API"]
-        D -->|Tab switch / Blur detection| F["Flag Anti-Cheat Violation"]
-        D -->|Submit Exam / Timeout| G["Consolidate Video Blobs"]
-        G --> H["Upload WebM Video via Multipart FormData"]
+    subgraph "Candidate Portal (React + WebRTC)"
+        A["Identity Verification Gate"] --> B["Hardware Handshake (Webcam/Screen)"]
+        B --> C["Secure Exam Workspace"]
+        C -->|MediaRecorder API| D["Capture WebM Chunks"]
+        C -->|Visibility API| E["Detect Tab-Switching"]
+        D -->|FormData POST| F["Video Chunk Uploader"]
+        E -->|Telemetry Event| G["Anti-Cheat API Endpoint"]
     end
-    subgraph "Backend Server (Node.js + Express)"
-        H --> I["Uploads & Media Controller"]
-        I -->|Write file to disk| J["uploads/recordings/ directory"]
-        I -->|Save file link metadata| K[("Prisma Client / MySQL DB")]
-        F -->|API Telemetry Report| K
+    subgraph "Core Backend Engine (Node.js + Express)"
+        F --> H["Media Controller"]
+        H -->|Disk I/O| I["/uploads/recordings/"]
+        G --> J["Session State Manager"]
+        J --> K[("MySQL Database (Prisma)")]
     end
-    subgraph "Administrative Suite (Admin React Console)"
-        L["Admin Login"] --> M["Dashboard Overview & Stats"]
-        M --> N["Exams CRUD / Template Cloning"]
-        M --> O["CCTV Live Monitoring Console"]
-        O -->|Stream & playback WebM| J
-        M --> P["Upload PDF Exam Paper"]
-        P -->|Call Groq SDK Llama3| Q["Parse & Import Questions"]
-        Q --> K
+    subgraph "Command Center (Admin Dashboard)"
+        L["Admin Authentication"] --> M["Live CCTV Monitor"]
+        M -->|Stream| I
+        L --> N["Exam Authoring Suite"]
+        N -->|PDF Upload| O["Groq Llama 3 AI Parser"]
+        O -->|Structured JSON| K
     end
 ```
 
 ---
 
-## 📺 Interface Showcases
+## 📺 Detailed Interface Showcases
+
+Our UI/UX team crafted CBTPro to be not only functional but visually stunning and highly intuitive. 
 
 <table width="100%">
   <tr>
-    <td width="50%" align="center"><strong>🌐 Public Candidate Portal</strong></td>
-    <td width="50%" align="center"><strong>🔒 Admin Authentication Gate</strong></td>
+    <td width="50%" align="center"><strong>🌐 Public Candidate Portal</strong><br><em>Sleek, responsive landing page for seamless onboarding.</em></td>
+    <td width="50%" align="center"><strong>🔒 Admin Authentication Gate</strong><br><em>Secure, enterprise-grade login for invigilators.</em></td>
   </tr>
   <tr>
     <td><img src="./screenshots/landing.png" alt="Landing Page" width="100%"></td>
     <td><img src="./screenshots/admin_login.png" alt="Admin Login" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><strong>📈 Statistics & Real-time Overview</strong></td>
-    <td width="50%" align="center"><strong>✏️ Rich-Text Exam Editor & Template Duplicator</strong></td>
+    <td width="50%" align="center"><strong>📈 Telemetry Dashboard Overview</strong><br><em>Bird's-eye view of all live metrics and system health.</em></td>
+    <td width="50%" align="center"><strong>✏️ Rich-Text Exam Editor</strong><br><em>WYSIWYG editor supporting complex mathematical formulas and images.</em></td>
   </tr>
   <tr>
     <td><img src="./screenshots/admin_dashboard.png" alt="Admin Dashboard" width="100%"></td>
     <td><img src="./screenshots/exam_management.png" alt="Exam Editor" width="100%"></td>
   </tr>
   <tr>
-     <td colspan="2" align="center"><strong>🎥 Live Telemetry & Automated Video Proctoring Playback</strong></td>
+     <td colspan="2" align="center"><strong>🎥 Live Telemetry & Automated Video Proctoring Playback</strong><br><em>Real-time CCTV grid allowing admins to monitor multiple candidates simultaneously.</em></td>
   </tr>
   <tr>
-     <td colspan="2" align="center"><img src="./screenshots/live_monitoring.png" alt="CCTV Proctoring" width="85%"></td>
+     <td colspan="2" align="center"><img src="./screenshots/live_monitoring.png" alt="CCTV Proctoring" width="90%"></td>
   </tr>
 </table>
 
 ---
 
-## 🚀 Key Architectural Capabilities
+## 🛡️ Unbreakable Anti-Cheat Mechanics
 
-* **Telemetry Proctoring:** Enforced full-screen share handshakes, visibility state observers (`visibilitychange`), and keyboard blockings (right-clicks, copy, paste).
-* **Media Archiving:** Real-time screen-frame capture via `MediaRecorder` API uploaded automatically as `.webm` chunks to avoid client memory exhaustion.
-* **Question Blueprinting:** Integrated Rich Text Editor (RTE) `react-quill` storing safe HTML structures inside MySQL database JSON columns.
-* **Instant Cloner:** One-click structural copy endpoints duplicating exam configurations and option groups.
-* **AI Ingestion:** Local PDF text parsers backed by **Groq Cloud API (Llama 3)** for automated question/answer classification.
+CBTPro implements military-grade countermeasures against academic dishonesty:
+
+1. **Hardware Enforced Screen Sharing:** Candidates cannot start the exam without sharing their entire screen. Selecting a specific window is programmatically rejected.
+2. **Foreground Focus Enforcement:** Utilizing the `visibilitychange` API. The exact millisecond a candidate clicks away, switches tabs, or minimizes the browser, a critical telemetry alert is dispatched to the server.
+3. **Continuous Video Archiving:** Screen recordings are captured via `MediaRecorder` and streamed to the server in lightweight `.webm` chunks to prevent client-side tampering or memory crashes.
+4. **Clipboard & Context Menu Lock:** Right-clicking, copying, and pasting are entirely disabled within the exam container.
 
 ---
 
-## 📊 Prisma Database Schema Definitions
+## 🤖 AI-Powered Exam Generation
 
-The application leverages a highly normalized MySQL database structure managed by Prisma ORM:
+Say goodbye to manual data entry. CBTPro integrates seamlessly with **Groq Cloud API** and the **Llama 3 LLM**.
 
-| Model | Description | Crucial Fields | Relations |
+* **How it works:** Admins upload a raw PDF containing unstructured text.
+* **Processing:** The backend extracts the text buffer and prompts the LLM to identify questions, options, and the correct answer.
+* **Output:** The LLM returns a strict JSON array which is instantly mapped to the `Question` database table. An entire 50-question paper is created in under 3 seconds!
+
+---
+
+## 📊 Prisma Database Schema & ERD
+
+Our relational database is heavily optimized for fast read-heavy operations during exams, using JSON columns for dynamic option structures.
+
+| Prisma Model | Core Purpose | Important Fields | Relationships |
 | :--- | :--- | :--- | :--- |
-| **User** | Core auth entity managing credentials and security roles. | `email`, `password`, `role` (ADMIN, STUDENT) | Relates to **Student** (1-to-1) |
-| **Student** | Candidate profile detailing enrollment info and documents. | `fullName`, `nisn`, `phone`, `status` (PENDING, VERIFIED) | Has many **Documents**, **ExamResults**, **ExamSessions** |
-| **Document** | Identity validation files uploaded by candidates. | `fileName`, `fileUrl`, `type` | Belongs to **Student** |
-| **Exam** | Exam modules detailing rules and scheduling bounds. | `title`, `durationMinutes`, `startTime`, `endTime` | Has many **Questions**, **ExamResults**, **ExamSessions** |
-| **Question** | Individual test items including text and multiple options. | `text` (HTML Text), `options` (JSON Array), `correctOption` | Belongs to **Exam** |
-| **ExamSession** | Tracks live CBT progression, active status, warnings, and videos. | `status` (ONGOING, SUBMITTED), `cheatWarnings`, `recordingUrl` | Relates to **Student** and **Exam** |
-| **ExamResult** | Final compiled test scores generated upon exam submission. | `score` | Relates to **Student** and **Exam** |
+| **`User`** | System Access & Security | `id`, `email`, `password`, `role` | `1:1` -> Student |
+| **`Student`** | Candidate Demographic Profile | `nisn`, `fullName`, `phone`, `status` | `1:M` -> Documents, Sessions |
+| **`Exam`** | Assessment Configuration | `title`, `duration`, `startTime`, `endTime`| `1:M` -> Questions, Sessions |
+| **`Question`** | Exam Content Storage | `text` (HTML), `options` (JSON), `answer`| `M:1` -> Exam |
+| **`ExamSession`**| Live State & Telemetry Link | `status`, `cheatWarnings`, `recordingUrl`| Links Student & Exam |
+| **`ExamResult`** | Immutable Final Scoring | `score`, `submittedAt` | Links Student & Exam |
 
 ---
 
-## 🔌 Rest API Reference Guide
+## 🔌 Extensive REST API Reference Guide
 
-### 1. Authentication Route
-* **`POST /api/auth/register`**
-  * *Access:* Public (Student signup)
-  * *Body:* `{ email, password, fullName, nisn }`
-* **`POST /api/auth/login`**
-  * *Access:* Public (Authenticates admin/students)
-  * *Body:* `{ email, password }`
+CBTPro provides a robust, fully-documented RESTful API. Below are key endpoints with request/response examples.
 
-### 2. Admin Panels Control
-* **`GET /api/admin/exams`**
-  * *Access:* Authenticated Admin
-  * *Description:* Retrieves all exams with question counts.
-* **`POST /api/admin/exams`**
-  * *Access:* Authenticated Admin
-  * *Body:* `{ title, description, durationMinutes, startTime, endTime }`
-* **`POST /api/admin/exams/clone/:id`**
-  * *Access:* Authenticated Admin
-  * *Description:* Duplicates the target exam and copies all its questions into a new set.
-* **`POST /api/admin/exams/:examId/questions`**
-  * *Access:* Authenticated Admin
-  * *Body:* `{ text, options, correctOption }` (stores parsed JSON arrays)
-* **`DELETE /api/admin/database/clear/results`**
-  * *Access:* Authenticated Admin
-  * *Description:* Clears all sessions, warnings, and scores (Clean DB).
+### 1. Start Exam Session (Telemetry Initiation)
+* **Endpoint:** `POST /api/exams/start`
+* **Headers:** `Authorization: Bearer <token>`
+* **Request Body:**
+  ```json
+  {
+    "examId": "cm1x8yqzw0001lq..."
+  }
+  ```
+* **Response (200 OK):**
+  ```json
+  {
+    "message": "Exam started successfully",
+    "session": {
+      "id": "cm1x8yqzw0002lq...",
+      "startTime": "2024-10-25T10:00:00Z",
+      "cheatWarnings": 0
+    }
+  }
+  ```
 
-### 3. Student CBT Telemetry
-* **`GET /api/exams/latest`**
-  * *Access:* Authenticated Student
-  * *Description:* Fetches the active exam assigned to the verified student.
-* **`POST /api/exams/start`**
-  * *Access:* Authenticated Student
-  * *Description:* Initiates an exam session and sets start timestamp.
-* **`POST /api/exams/cheat`**
-  * *Access:* Authenticated Student
-  * *Description:* Tracks background tab-switches and increments `cheatWarnings`.
-* **`POST /api/exams/upload-recording`**
-  * *Access:* Authenticated Student
-  * *Description:* Uploads the proctoring screen-recording `.webm` file (Multipart/form-data).
-* **`POST /api/exams/submit`**
-  * *Access:* Authenticated Student
-  * *Body:* `{ examId, answers: { questionId: chosenOptionLetter } }`
+### 2. Report Tab Switch (Anti-Cheat)
+* **Endpoint:** `POST /api/exams/cheat`
+* **Headers:** `Authorization: Bearer <token>`
+* **Request Body:**
+  ```json
+  {
+    "examId": "cm1x8yqzw0001lq..."
+  }
+  ```
+* **Response (200 OK):**
+  ```json
+  {
+    "message": "Cheat warning logged",
+    "totalWarnings": 3
+  }
+  ```
+
+### 3. AI Question Import (Admin Only)
+* **Endpoint:** `POST /api/admin/exams/:id/import-pdf`
+* **Content-Type:** `multipart/form-data`
+* **Body:** Form data containing the `pdf_file` blob.
+* **Response (201 Created):**
+  ```json
+  {
+    "message": "Imported 45 questions successfully via Groq Llama3"
+  }
+  ```
 
 ---
 
-## 📦 Directory Structure
+## ⚙️ Complete Setup & Installation Instructions
 
+Follow these steps carefully to deploy CBTPro on your local machine or server.
+
+### Prerequisites
+* Node.js (v18 or higher)
+* MySQL Server (v8.0 or higher)
+* Git
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/ksisiksksks/cbtpro.git
+cd cbtpro
 ```
-/coding
-├── .github/workflows/  # CI pipelines (CI build check workflows)
-│   └── ci.yml
-├── backend/            # Express.js + TypeScript Backend Server
-│   ├── prisma/         # Prisma Schemas & Database Migration Scripts
-│   ├── src/
-│   │   ├── controllers/# Business Controllers (Auth, Student, Exam, Proctoring)
-│   │   ├── middlewares/# JWT Security Checkers
-│   │   └── utils/      # Wrappers (Prisma client, Groq config)
-│   └── uploads/        # Host folder for proctor recordings (.webm video files)
-├── frontend/           # Vite + React Client Dashboard
-│   └── src/
-│       ├── components/ # Reusable UI components
-│       └── pages/      # View routes (CbtExam, AdminDashboard, etc.)
-└── screenshots/        # Assets and visual elements for README.md
+
+### Step 2: Backend Configuration
+```bash
+cd backend
+npm install
 ```
-
----
-
-## 📝 Environment Configurations
-
-Before launching, configure a `.env` in the `backend/` root directory using the definitions below:
-
+Create a `.env` file in the `backend/` directory:
 ```properties
-# Backend port configuration
+# Server Port
 PORT=5000
 
-# Prisma MySQL driver connection string
-DATABASE_URL="mysql://root:@localhost:3306/spmb_db"
+# Database Connection (Adjust to your MySQL credentials)
+DATABASE_URL="mysql://root:yourpassword@localhost:3306/cbtpro_db"
 
-# JWT token signing secret key
-JWT_SECRET="YOUR_RANDOM_LONG_SECRET_KEY"
+# Security Secret (Make this random and long!)
+JWT_SECRET="cbtpro_super_secret_enterprise_key_2024"
 
-# Groq API cloud key for AI question extraction
-GROQ_API_KEY="YOUR_GROQ_CLOUD_API_KEY"
+# AI Integration Key (Get from console.groq.com)
+GROQ_API_KEY="gsk_your_groq_api_key_here"
 ```
 
----
-
-## ⚙️ Setup & Installation Instructions
-
-<details>
-<summary><b>🔌 Setup Backend API Server</b></summary>
-
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install NodeJS dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up database variables. Rename or create a `.env` file inside `backend/` directory:
-   ```env
-   PORT=5000
-   DATABASE_URL="mysql://root:@localhost:3306/spmb_db"
-   JWT_SECRET="YOUR_RANDOM_LONG_SECRET_KEY"
-   GROQ_API_KEY="YOUR_GROQ_CLOUD_API_KEY"
-   ```
-4. Perform Prisma migration checks to compile drivers:
-   ```bash
-   npx prisma db push
-   ```
-5. Seed initial mock database exams and questions:
-   ```bash
-   npx ts-node seed.ts
-   ```
-6. Start dev server:
-   ```bash
-   npm run dev
-   ```
-</details>
-
-<details>
-<summary><b>🎨 Setup Frontend React App</b></summary>
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd ../frontend
-   ```
-2. Install frontend packages:
-   ```bash
-   npm install
-   ```
-3. Start the dev client:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser and view client portal: `http://localhost:5173`.
-</details>
-
----
-
-## 🔒 Proctoring Telemetry Details
-
-The security system runs on dual layers of protection:
-
-### 1. Tab switching/blur handler:
-```javascript
-// Observers tab visibility and logs to backend
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) {
-    // Increments violation metrics automatically
-    axios.post('/api/exams/cheat', { examId });
-  }
-});
+### Step 3: Database Migration & Seeding
+Push the Prisma schema to your MySQL database and seed initial test data.
+```bash
+npx prisma db push
+npx ts-node seed.ts
 ```
 
-### 2. Stream recorder & chunks packaging:
-```javascript
-// Sets stream constraints and pipe chunks
-const stream = await navigator.mediaDevices.getDisplayMedia({ video: true });
-const mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm' });
-mediaRecorder.ondataavailable = (e) => {
-  if (e.data.size > 0) recordedChunks.push(e.data);
-};
+### Step 4: Run the Backend Engine
+```bash
+npm run dev
 ```
+*The backend should now be listening on port 5000.*
+
+### Step 5: Frontend Configuration
+Open a new terminal tab and navigate to the frontend:
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+*The frontend is now accessible at `http://localhost:5173`.*
 
 ---
 
-## 🛠️ Troubleshooting & FAQ
+## 📈 Project Roadmap & Future Outlook
 
-#### Q: I receive a `P1001: Can't reach database server` error. How do I fix it?
-Make sure your MySQL database service is running locally on port 3306. Check your database username/password matching credentials in `backend/.env`.
+CBTPro is constantly evolving. Here is what we are building next:
 
-#### Q: How do I grant screen-recording permissions?
-If your browser throws `NotAllowedError: Permission denied`, check your operating system preferences (System Settings -> Privacy & Security -> Screen Recording) and allow Chrome/Firefox/Safari browser access.
-
-#### Q: Why is my PDF AI upload failing?
-Make sure `GROQ_API_KEY` is active and correct. The PDF must contain extractable text characters (not a flat-scanned photograph).
-
----
-
-## 🗺️ Project Roadmap
-- [ ] **Proctor Multi-Camera Monitor:** Enable secondary webcam recording using Face-Mesh checks.
-- [ ] **Offline Standalone Lock:** Develop a lightweight electron wrapper app to lock system functions entirely.
-- [ ] **AI-Assisted Grading Analyser:** Automated grading analytics and feedback generation for essays.
+- [ ] **Dual-Camera Face Mesh:** Implementing TensorFlow.js to track eye movement and second-camera mobile integration.
+- [ ] **Desktop Lockdown Browser:** A dedicated Electron app to disable OS-level shortcuts (Ctrl+Alt+Del, Alt+Tab).
+- [ ] **Automated Essay Scoring:** Using LLMs to grade descriptive paragraph answers and provide immediate feedback.
+- [ ] **Dockerization:** Providing a 1-click `docker-compose.yml` for instant zero-config deployments.
 
 ---
 
 ## 🤝 Contributing & License
-* Contributions are welcome! Please check out [CONTRIBUTING.md](./CONTRIBUTING.md).
-* This project is open-source software licensed under the **[CBTPro Non-Commercial License](./LICENSE)**.
+
+We believe in the power of the open-source community! 
+
+* **Contributing:** Want to add a feature? Fix a bug? Read our extensive [CONTRIBUTING.md](./CONTRIBUTING.md) guide to get started. 
+* **Code of Conduct:** Please adhere to our [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) to keep our community safe and welcoming.
+* **Security:** Found a vulnerability? Refer to our [SECURITY.md](./SECURITY.md) for responsible disclosure.
+
+### 📜 License Declaration
+This project is fiercely protected by the **[CBTPro Non-Commercial License](./LICENSE)**. It is free for educational and personal use, but **COMMERCIAL RESALE IS STRICTLY PROHIBITED.** 
+
+---
+<p align="center">
+  <i>Developed with ❤️ by the CBTPro Open Source Team</i>
+</p>

@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import { BookOpen, LogIn, UserPlus, CheckCircle, GraduationCap, MapPin, Phone, Mail, Award, Clock } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import LanguageToggle from '../components/LanguageToggle';
 
 export default function Landing() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans overflow-x-hidden">
       {/* Navbar */}
@@ -14,13 +18,14 @@ export default function Landing() {
             <span className="font-black text-2xl tracking-tight text-slate-800">CBT<span className="text-blue-600">Pro</span></span>
           </div>
           <div className="hidden md:flex items-center gap-8 font-semibold text-slate-600">
-            <a href="#beranda" className="hover:text-blue-600 transition-colors">Beranda</a>
-            <a href="#alur" className="hover:text-blue-600 transition-colors">Alur Pendaftaran</a>
-            <a href="#fasilitas" className="hover:text-blue-600 transition-colors">Fasilitas</a>
+            <a href="#beranda" className="hover:text-blue-600 transition-colors">{t('nav_home')}</a>
+            <a href="#alur" className="hover:text-blue-600 transition-colors">{t('nav_flow')}</a>
+            <a href="#fasilitas" className="hover:text-blue-600 transition-colors">{t('nav_facilities')}</a>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/login-spmb" className="font-bold text-slate-600 hover:text-blue-600 transition-colors">Masuk Dasbor</Link>
-            <Link to="/register" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">Daftar Sekarang</Link>
+            <LanguageToggle />
+            <Link to="/login-spmb" className="font-bold text-slate-600 hover:text-blue-600 transition-colors">{t('nav_login')}</Link>
+            <Link to="/register" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">{t('nav_register')}</Link>
           </div>
         </div>
       </nav>
@@ -38,20 +43,20 @@ export default function Landing() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
               </span>
-              Pendaftaran Gelombang 1 Dibuka
+              {t('hero_badge')}
             </div>
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
-              Langkah Awal Menuju <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Masa Depan</span> Gemilang.
+              {t('hero_title_1')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">{t('hero_title_2')}</span> {t('hero_title_3')}
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-lg">
-              Sistem Penerimaan Murid Baru modern dengan fasilitas ujian Computer Based Test (CBT) terintegrasi Artificial Intelligence (AI).
+              {t('hero_desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/register" className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 text-lg">
-                <UserPlus size={22} /> Daftar Sekarang
+                <UserPlus size={22} /> {t('btn_register')}
               </Link>
               <Link to="/login-cbt" className="bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 px-8 py-4 rounded-xl font-bold transition-all shadow-sm flex items-center justify-center gap-2 text-lg">
-                <LogIn size={22} /> Masuk Ujian CBT
+                <LogIn size={22} /> {t('btn_login_cbt')}
               </Link>
             </div>
             
@@ -62,7 +67,7 @@ export default function Landing() {
                 <img className="w-12 h-12 rounded-full border-4 border-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Student 3" />
                 <div className="w-12 h-12 rounded-full border-4 border-white bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs">+500</div>
               </div>
-              <p className="text-sm font-semibold text-slate-600">Telah bergabung <br/>di tahun ajaran lalu</p>
+              <p className="text-sm font-semibold text-slate-600">{t('hero_joined')}</p>
             </div>
           </div>
           
@@ -71,14 +76,13 @@ export default function Landing() {
               <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80" alt="Students" className="w-full h-full object-cover" />
             </div>
             
-            {/* Floating Badges */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce-slow">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                 <CheckCircle size={24} className="text-green-600" />
               </div>
               <div>
-                <p className="font-black text-xl text-slate-800">Terakreditasi A</p>
-                <p className="text-sm text-slate-500 font-medium">BAN-PT / BAN-SM</p>
+                <p className="font-black text-xl text-slate-800">{t('badge_accreditation')}</p>
+                <p className="text-sm text-slate-500 font-medium">{t('badge_accreditation_desc')}</p>
               </div>
             </div>
             
@@ -87,8 +91,8 @@ export default function Landing() {
                 <GraduationCap size={24} className="text-amber-600" />
               </div>
               <div>
-                <p className="font-black text-xl text-slate-800">Beasiswa Penuh</p>
-                <p className="text-sm text-slate-500 font-medium">Tersedia 50+ Kuota</p>
+                <p className="font-black text-xl text-slate-800">{t('badge_scholarship')}</p>
+                <p className="text-sm text-slate-500 font-medium">{t('badge_scholarship_desc')}</p>
               </div>
             </div>
           </div>
@@ -99,19 +103,18 @@ export default function Landing() {
       <section id="alur" className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-black mb-4">Alur Pendaftaran & Seleksi</h2>
-            <p className="text-slate-400 text-lg">Proses transparan, cepat, dan sepenuhnya online.</p>
+            <h2 className="text-4xl font-black mb-4">{t('flow_title')}</h2>
+            <p className="text-slate-400 text-lg">{t('flow_desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {/* Connecting line for desktop */}
             <div className="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-slate-800 -z-0"></div>
             
             {[
-              { step: "01", title: "Registrasi Online", desc: "Buat akun dengan email & NISN" },
-              { step: "02", title: "Upload Berkas", desc: "Lengkapi data diri, Ijazah & KK" },
-              { step: "03", title: "Ujian CBT AI", desc: "Kerjakan tes seleksi secara online" },
-              { step: "04", title: "Pengumuman", desc: "Hasil keluar secara real-time" }
+              { step: "01", title: t('flow_1_title'), desc: t('flow_1_desc') },
+              { step: "02", title: t('flow_2_title'), desc: t('flow_2_desc') },
+              { step: "03", title: t('flow_3_title'), desc: t('flow_3_desc') },
+              { step: "04", title: t('flow_4_title'), desc: t('flow_4_desc') }
             ].map((item, i) => (
               <div key={i} className="relative z-10 text-center">
                 <div className="w-24 h-24 mx-auto bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center font-black text-3xl text-blue-400 mb-6 shadow-xl shadow-blue-900/20">
@@ -129,15 +132,15 @@ export default function Landing() {
       <section id="fasilitas" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl font-black text-slate-800 mb-4">Fasilitas Unggulan</h2>
-            <p className="text-slate-500 text-lg">Mendukung penuh potensi akademik dan non-akademik siswa.</p>
+            <h2 className="text-4xl font-black text-slate-800 mb-4">{t('fac_title')}</h2>
+            <p className="text-slate-500 text-lg">{t('fac_desc')}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <BookOpen />, title: "Perpustakaan Digital", desc: "Akses ribuan e-book dan jurnal internasional gratis." },
-              { icon: <Award />, title: "Kurikulum Modern", desc: "Pendekatan belajar berbasis proyek dan teknologi terkini." },
-              { icon: <Clock />, title: "Sistem Terintegrasi", desc: "Mulai dari pendaftaran hingga rapor bisa diakses online." }
+              { icon: <BookOpen />, title: t('fac_1_title'), desc: t('fac_1_desc') },
+              { icon: <Award />, title: t('fac_2_title'), desc: t('fac_2_desc') },
+              { icon: <Clock />, title: t('fac_3_title'), desc: t('fac_3_desc') }
             ].map((item, i) => (
               <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-blue-200 hover:bg-blue-50/50 transition-colors group">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm border border-slate-100 mb-6 group-hover:scale-110 transition-transform">
@@ -161,11 +164,11 @@ export default function Landing() {
               </div>
               <span className="font-black text-2xl tracking-tight text-white">CBT<span className="text-blue-500">Pro</span></span>
             </div>
-            <p className="max-w-sm mb-6">Sistem Penerimaan Murid Baru modern dengan fasilitas Computer Based Test (CBT) dan pemrosesan soal cerdas terintegrasi AI.</p>
+            <p className="max-w-sm mb-6">{t('footer_desc')}</p>
           </div>
           
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Kontak Kami</h4>
+            <h4 className="text-white font-bold text-lg mb-6">{t('footer_contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3"><MapPin size={20} className="text-blue-500 flex-shrink-0" /> <span>Jl. Pendidikan No. 123, Jakarta Pusat</span></li>
               <li className="flex items-center gap-3"><Phone size={20} className="text-blue-500 flex-shrink-0" /> <span>(021) 1234-5678</span></li>
@@ -174,18 +177,18 @@ export default function Landing() {
           </div>
           
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Akses Cepat</h4>
+            <h4 className="text-white font-bold text-lg mb-6">{t('footer_links')}</h4>
             <ul className="space-y-3 font-medium">
-              <li><Link to="/login-spmb" className="hover:text-blue-400 transition-colors">Masuk Dasbor Siswa</Link></li>
-              <li><Link to="/login-cbt" className="hover:text-blue-400 transition-colors">Portal Ujian CBT</Link></li>
-              <li><Link to="/register" className="hover:text-blue-400 transition-colors">Daftar Baru</Link></li>
-              <li><Link to="/admin/login" className="hover:text-blue-400 transition-colors">Portal Admin / Panitia</Link></li>
+              <li><Link to="/login-spmb" className="hover:text-blue-400 transition-colors">{t('link_dashboard')}</Link></li>
+              <li><Link to="/login-cbt" className="hover:text-blue-400 transition-colors">{t('link_cbt')}</Link></li>
+              <li><Link to="/register" className="hover:text-blue-400 transition-colors">{t('link_new_register')}</Link></li>
+              <li><Link to="/admin/login" className="hover:text-blue-400 transition-colors">{t('link_admin')}</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 text-sm text-center">
-          &copy; 2026 CBTPro Education Systems. All rights reserved.
+          {t('footer_copyright')}
         </div>
       </footer>
     </div>

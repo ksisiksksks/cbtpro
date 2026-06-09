@@ -1,0 +1,25 @@
+# Node
+node_modules/
+dist/
+dist-ssr/
+build/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Server Uploads / media files
+backend/uploads/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store

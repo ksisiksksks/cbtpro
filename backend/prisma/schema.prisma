@@ -1,0 +1,112 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum StudentStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+model User {
+  id             Int       @id @default(autoincrement())
+  email          String?   @unique
+  password       String?
+  role           Role      @default(STUDENT)
+  loginToken     String?   @unique // For single-use student login
+  tokenExpiresAt DateTime?
+  tokenUsed      Boolean   @default(false)
+  student        Student?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Student {
+  id        Int           @id @default(autoincrement())
+  userId    Int           @unique
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  fullName  String
+  nisn      String?       @unique
+  phone     String?
+  address   String?
+  status    StudentStatus @default(PENDING)
+  documents Document[]
+  results   ExamResult[]
+  sessions  ExamSession[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model Document {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  fileName  String
+  fileUrl   String
+  type      String
+  createdAt DateTime @default(now())
+}
+
+model Exam {
+  id              Int          @id @default(autoincrement())
+  title           String
+  description     String?
+  startTime       DateTime?
+  endTime         DateTime?
+  durationMinutes Int          @default(60)
+  questions       Question[]
+  results         ExamResult[]
+  sessions        ExamSession[]
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+}
+
+model Question {
+  id            Int      @id @default(autoincrement())
+  examId        Int
+  exam          Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
+  text          String   @db.Text
+  options       Json     
+  correctOption String   
+  createdAt     DateTime @default(now())
+}
+
+model ExamResult {
+  id        Int      @id @default(autoincrement())
+  studentId Int
+  student   Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  examId    Int
+  exam      Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
+  score     Float
+  createdAt DateTime @default(now())
+
+  @@unique([studentId, examId])
+}
+
+model ExamSession {
+  id            Int      @id @default(autoincrement())
+  studentId     Int
+  student       Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  examId        Int
+  exam          Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
+  status        String   @default("ONGOING") // ONGOING, SUBMITTED
+  cheatWarnings Int      @default(0)
+  recordingUrl  String?  // Path to the screen recording video
+  startTime     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([studentId, examId])
+}
